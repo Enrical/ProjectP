@@ -1,12 +1,48 @@
 *{
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
+body{
+    background-color:beige;
+}
+header{
+    //header
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 60px;
+    background:url(https://cdn.pixabay.com/photo/2020/04/03/19/02/virus-4999857_960_720.png) no-repeat center bottom fixed;
+    background-size: cover;
+    background-color: #00cc00;
+    //text
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+footer{
+    //footer
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 6px;
+    padding-right: 10px;
+    background-color: #ffc34d;
+    //text
+    text-align: right;
+    color: black;
+    font-size: 10px;
+    line-height: 5px;
+}
 .test1{
+    position: relative;
+    width: 20%;
+
+
+    background-color: red;
     color:green;
 }
-
 .test2{
     color: red;
 }
