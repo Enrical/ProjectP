@@ -2,11 +2,14 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 body{
     background-color:beige;
+    margin: 0;
 }
+
+ //header
 header{
-    //header
     position: absolute;
     top: 0;
     left: 0;
@@ -14,15 +17,35 @@ header{
     padding: 60px;
     background:url(https://cdn.pixabay.com/photo/2020/04/03/19/02/virus-4999857_960_720.png) no-repeat center bottom fixed;
     background-size: cover;
-    background-color: #00cc00;
     //text
     text-align: center;
     color: black;
     font-size: 30px;
 }
+
+.main{
+    // margin-top: 16em;
+    margin: 18em auto 0 auto;
+    text-align: center;
+    .container{
+    // margin: 18em auto 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    text-align: center;
+    // width: 100%;
+    img{
+        height: 11em;
+        width: 14em;
+    }
+}
+.services{
+    margin: 0 auto;
+    padding: 10px;
+}
+}
+
+//footer
 footer{
-    //footer
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -35,14 +58,4 @@ footer{
     font-size: 10px;
     line-height: 5px;
 }
-.test1{
-    position: relative;
-    width: 20%;
 
-
-    background-color: red;
-    color:green;
-}
-.test2{
-    color: red;
-}
