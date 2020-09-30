@@ -1,28 +1,46 @@
-*{
+/* COLOR PALETTE: */
+  $background_color: #F5F5F5; //Background
+  $primary_text: black; //Primary Text
+  $primary_color: #ffc34d; //Primary color
+  $primary_color_text: white; //Primary color_text
+  $accent_color: #CDDC39; //Accent color
+  $accent_color_text: black; //Accent color_text
+
+/* SIZE PALETTE: */
+/* HACER LO MISMO QUYE CON LOS COLORES PARA QUE SEA FÁCIL DE CAMBIAR */
+
+/* GLOBAL */
+* {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Roboto, 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    background-color:beige;
+body {
+    background-color: $background_color;
     margin: 0;
 }
 
- //header
-header{
+/* LAYOUT */
+
+/* HEADER */
+header {
     position: absolute;
     top: 0;
-    left: 0;
+    height: 20%;
     width: 100%;
-    padding: 60px;
-    background:url(https://cdn.pixabay.com/photo/2020/04/03/19/02/virus-4999857_960_720.png) no-repeat center bottom fixed;
+    background: url(https://cdn.pixabay.com/photo/2020/04/03/19/02/virus-4999857_960_720.png) no-repeat center bottom fixed;
     background-size: cover;
-    //text
+    background-color: $primary_color;
+    /* text */
+    padding: 1em;
     text-align: center;
-    color: black;
+    color: $primary_text;
     font-size: 30px;
 }
 
+/* MAIN */
 .main{
     // margin-top: 16em;
     margin: 18em auto 0 auto;
@@ -38,24 +56,22 @@ header{
         width: 14em;
     }
 }
+/* SERVICES */
 .services{
     margin: 0 auto;
     padding: 10px;
 }
 }
 
-//footer
+/* FOOTER */
 footer{
     bottom: 0;
-    left: 0;
     width: 100%;
-    padding: 6px;
-    padding-right: 10px;
-    background-color: #ffc34d;
-    //text
+    padding: 1em;
+    background-color: $primary_color;
+    /* text */
     text-align: right;
-    color: black;
-    font-size: 10px;
-    line-height: 5px;
+    color: $primary_text;
+    font-size: 0.8em;
+    line-height: 1.2em;
 }
-
