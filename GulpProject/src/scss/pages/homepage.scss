@@ -1,77 +1,149 @@
-/* COLOR PALETTE: */
-  $background_color: #F5F5F5; //Background
-  $primary_text: black; //Primary Text
-  $primary_color: #ffc34d; //Primary color
-  $primary_color_text: white; //Primary color_text
-  $accent_color: #CDDC39; //Accent color
-  $accent_color_text: black; //Accent color_text
-
-/* SIZE PALETTE: */
-/* HACER LO MISMO QUYE CON LOS COLORES PARA QUE SEA FÁCIL DE CAMBIAR */
-
 /* GLOBAL */
-* {
+*{
     box-sizing: border-box;
-    font-family: Roboto, 'Arial', sans-serif;
+    font-family: $primary_font;
     margin: 0;
     padding: 0;
 }
-
-body {
+html {
+    font-size: 100%; /* 100% = 16px */
+    scroll-behavior: smooth;
+}
+body{
     background-color: $background_color;
-    margin: 0;
+}
+h1{
+    font-size: $font_size_h1;  
+    color: $primary_text;
+}
+h2{
+    font-size: $font_size_h2;  
+    color: $primary_text;
+}
+p{
+    font-size: $font_size_p;  
+    color: $primary_text;
+}
+li{
+    font-size: $font_size_p;
+    color: $primary_color_text;
 }
 
-/* LAYOUT */
-
 /* HEADER */
-header {
-    position: absolute;
-    top: 0;
-    height: 20%;
+header{
     width: 100%;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url(https://cdn.pixabay.com/photo/2020/04/03/19/02/virus-4999857_960_720.png) no-repeat center bottom fixed;
     background-size: cover;
     background-color: $primary_color;
-    /* text */
-    padding: 1em;
+}
+#header_logo{
+    height: $font_size_h1;
+    width: $font_size_h1;
+    margin-right: 0.5em;
+    filter: grayscale(0%);
+}
+
+/* MENU */
+#main_menu{
+    background-color: $menu_color;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+#main_menu a:link, a:visited, a:active{
+    text-decoration:none; 
+    color: inherit;
+}
+#main_menu li{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: $font_size_p*3;
+    padding: $font_size_p;
+    border-bottom: 3px solid $primary_color;
+}
+#main_menu li .menu_button{
+    margin: 0.2em;
+    font-size: $font_size_p;
+}
+#main_menu .selected{
+    background-color:$primary_color;
     color: $primary_text;
-    font-size: 30px;
+}
+#main_menu li:hover:not(.selected){
+    background-color: #111;
+}
+/* Buscador */
+input[type=text] {
+    width: 20em;
+    box-sizing: border-box;
+    border: 0.2em solid $menu_color;
+    margin-left: 0.5em;
+    border-radius: 0.4em;
+    font-size: $font_size_p;
+    background-color: $primary_color_text;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+input[type=text]:focus {
+    width: 50%;
 }
 
 /* MAIN */
 .main{
-    // margin-top: 16em;
-    margin: 18em auto 0 auto;
+   // padding: 1em;
     text-align: center;
-    .container{
-    // margin: 18em auto 0 auto;
+}
+#home{
+    padding: $font_size_p*3;
+    width: 100%;
+    height: 30em;
+   // display: flex;
+   // flex-flow: wrap;
+//position: absolute;
+   top: 4em;
+
+    background-color: red;
+   // margin: 0;
+   // padding: 0;
+    overflow: hidden;
+ //   position: -webkit-sticky;
+ //  position: sticky;
+    //top: 0;
+}
+#services{
+    padding: $font_size_p*3;
     display: flex;
     flex-flow: wrap;
-    text-align: center;
-    // width: 100%;
-    img{
-        height: 11em;
-        width: 14em;
-    }
 }
-/* SERVICES */
 .services{
     margin: 0 auto;
-    padding: 10px;
+    padding: 0.6em;
 }
+img{
+    height: 11em;
+    width: 14em;
 }
 
 /* FOOTER */
 footer{
+    background-color: $primary_color;
     bottom: 0;
     width: 100%;
     padding: 1em;
-    background-color: $primary_color;
-    /* text */
     text-align: right;
-    color: $primary_text;
-    font-size: 0.8em;
-    line-height: 1.2em;
+}
+.p_footer{
+    font-size: $font_size_footer;
 }
