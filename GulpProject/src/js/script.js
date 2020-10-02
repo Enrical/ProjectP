@@ -2,27 +2,28 @@
 console.log("App is alive");
 
 /* Menu buttons */
-var home = {
+// Es mejor usar let y const. var puede dar errores y funcionar cuando no deberia
+let home = {
     name: "Home",
     selected: false,
 };
-var services = {
+let services = {
     name: "Services",
     selected: false,
 };
-var test1 = {
+let test1 = {
     name: "Test1",
     selected: false,
 };
-var test2 = {
+let test2 = {
     name: "Test2",
     selected: false,
 };
-var about = {
+let about = {
     name: "About",
     selected: false,
 };
-var currentMenu = home;
+let currentMenu = home;
 
 /* Precarga de datos*/
 
@@ -34,6 +35,7 @@ function onLoadData() {
  * Switch menu name in the navigation menu
  * @param menuObject
  */
+
 function switchMenu(menuObject) {
     // highlight the selected #main_menu. //INEFICIENT
     $('#main_menu li').removeClass('selected');
